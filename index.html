@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="output.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: "#da373d",
+          },
+        },
+      },
+    };
+  </script>
+  <title>Todo App </title>
+</head>
+
+
+<body
+  class=" bg-gradient-to-br from-purple-500 red-700 to-blue-500 h-screen flex justify-center items-center grid-flow-row">
+
+  <div class="w-80 h-auto bg-white rounded-lg shadow-lg p-6 grid gap-x-1 gap-y-3">
+    <h class="text-blue-500 text-4xl font-bold  tracking-tigh sm:text-2xl">Todo App</h>
+    <div class="flex mb-4 w-50 h-10">
+      <input id="todoInput" type="text" placeholder="Add your new todo"
+        class="flex-1 appearance-none border rounded py-1 px-3 mr-2 focus:outline-none focus:border-blue-500">
+      <button onclick="addTodo()"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">+</button>
+    </div>
+    <!--todolist-->
+    <div id="todoList" class=" p-2 mb-4 gap-1 grid -mt-6">
+      <div class="bg-blue-100 rounded px-3 py-2 ">Buy a new gaming laptop </div>
+      <div class="bg-red-100 rounded px-3 py-2">Complete a previous task</div>
+      <div class="bg-green-100 rounded px-3 py-2">Create video for YouTube</div>
+      <div class="bg-gray-100 rounded px-3 py-2">Create a new portfolio site</div>
+    </div>
+
+
+    <!--clearall-->
+    <div class="flex gap-2">
+      <p>You have <span id="pendingTasks">4</span> pending tasks</p>
+      <button onclick="clearAll()" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-2 rounded mt-2">Clear
+        All</button>
+
+    </div>
+
+
+  </div>
+ 
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script class="bootstrap" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+</html>
